@@ -2,6 +2,9 @@ import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa6'
 
+// Удалите эту строку ↓
+// const basePath = import.meta.env.BASE_URL;
+
 interface GalleryProps {
   images: string[]
 }
@@ -36,6 +39,10 @@ const Gallery = ({ images }: GalleryProps) => {
               src={images[currentIndex]} 
               alt={`Результат ${currentIndex + 1}`}
               className="w-full h-auto object-cover"
+              onError={(e) => {
+                console.error('Ошибка загрузки:', images[currentIndex]);
+                e.currentTarget.src = 'https://via.placeholder.com/800x600?text=Image+not+found';
+              }}
             />
           </div>
           

@@ -11,6 +11,8 @@ import Form from '../components/Form'
 import Footer from '../components/Footer'
 import { siteContent } from '../data/content'
 
+const basePath = import.meta.env.BASE_URL;
+
 const HomePage = () => {
   return (
     <main>
@@ -42,7 +44,7 @@ const HomePage = () => {
         title={siteContent.stats.title}
         description={siteContent.stats.description}
       />
-      <Gallery images={siteContent.gallery.images.map(img => `/src/assets/images/${img}`)} />
+      <Gallery images={siteContent.gallery.images.map(img => `${basePath}images/${img}`)} />
       <Reviews reviews={siteContent.reviews.items} />
       <Form 
         title={siteContent.form.title}
