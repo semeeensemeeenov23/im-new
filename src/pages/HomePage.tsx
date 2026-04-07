@@ -44,6 +44,7 @@ const HomePage = () => {
         title={siteContent.stats.title}
         description={siteContent.stats.description}
       />
+      {/* ИСПРАВЛЕНО: убрано лишнее /public/ */}
       <Gallery images={siteContent.gallery.images.map(img => `${basePath}images/${img}`)} />
       <Reviews reviews={siteContent.reviews.items} />
       <Form 

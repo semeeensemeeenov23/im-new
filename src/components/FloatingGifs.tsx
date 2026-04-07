@@ -4,7 +4,6 @@ import { FaTimes } from "react-icons/fa";
 
 const basePath = import.meta.env.BASE_URL;
 
-
 const gifUrls = [
   `${basePath}gifs/gif1.gif`,
   `${basePath}gifs/gif2.gif`,
