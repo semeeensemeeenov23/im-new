@@ -60,6 +60,9 @@
 
 ## 📦 Установка и запуск
 
+<!-- update 2026-04-16 -->
+
+
 ```bash
 # Клонировать репозиторий
 git clone https://github.com/semeeensemeeenov23/im-new.git
